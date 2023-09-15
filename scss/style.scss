@@ -1,0 +1,429 @@
+.text {
+    line-height: 24px;
+    font-size: 14px;
+    color: #666;
+    font-family: poppins, sans-serif;
+}
+body {
+    font-family: montserrat, sans-serif;
+    a {
+        color: #333;
+    }
+}
+* {
+    animation-delay: 0.1s;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// body.animsition {
+//     font-family: "Poppins", sans-serif;
+// }
+
+.container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.header-inner {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 84px;
+    padding: 0;
+}
+
+.mini-cart-btn {
+    width: 45px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mini-cart-btn .icon {
+    font-size: 24px;
+}
+
+.mini-cart-btn .number-wrap {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.logo-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrap a {
+    display: inline-block;
+}
+
+.logo-wrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ваш існуючий CSS */
+
+.nav-header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-header ul li {
+    margin-left: 20px;
+}
+
+.nav-header ul li:first-child {
+    margin-left: auto;
+}
+
+.nav-header ul li:last-child {
+    margin-left: 0;
+}
+
+.nav-header ul li a {
+    color: #666;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+/* Додайте підступи між списками */
+.nav-header ul.list-inline li {
+    margin-left: 27px;
+}
+
+.search-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.number-1 {
+    color: #666;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
+}
+
+/* <!-- КІНЕЦЬ ХЕАДЕР --> */
+
+/* Стилі для каруселі */
+.carousel-item {
+    .carousel-item__text {
+        display: none;
+        font-family: montserrat, sans-serif;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: -120px;
+        width: 495px;
+        padding: 25px 15px 25px 45px;
+        text-transform: uppercase;
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 60px;
+            height: 5px;
+            left: -30px;
+            top: 50%;
+            background: #333;
+        }
+        .text2 {
+            margin-left: 70px;
+            padding-left: 24px;
+            font-weight: 600;
+            font-size: 30px;
+            max-width: 365px;
+        }
+        .numbers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 36px;
+            color: #333;
+            font-weight: 600;
+            width: 69px;
+            height: 69px;
+            text-align: center;
+            border: 5px solid #333;
+        }
+    }
+}
+.carousel-item.active {
+    .carousel-item__text {
+        display: block;
+        transform: translateY(-120px);
+        transition:
+            opacity 1s ease,
+            transform 2s ease;
+    }
+}
+.arrows-slider {
+    &.carousel-control-next {
+        color: #666;
+    }
+    &.carousel-control-prev {
+        color: #666;
+    }
+    font-size: 50px;
+    color: #666;
+    cursor: pointer;
+    margin-top: -15px;
+    &-right {
+        &:hover::before {
+            transition: transform 0.3s ease;
+            color: #1b1b1b;
+        }
+        &::before {
+            content: "\2192";
+        }
+    }
+    &-left {
+        &:hover::before {
+            transition: transform 0.3s ease;
+            color: #1b1b1b;
+        }
+        &::before {
+            content: "\2190";
+        }
+    }
+}
+.who-ami {
+    .who-ami-unfold{
+        width: 200px;
+    }
+    display: flex;
+    align-items: center;
+    &-inner{
+        max-width: 970px;
+        margin-bottom: 61px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text{
+           max-width: 437px;
+        }
+    }
+    &-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        .title {
+            font-weight: 600;
+            display: inline-block;
+            max-width: 414px;
+            position: relative;
+            font-size: 60px;
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                height: 4px;
+                width: 100%;
+                z-index: 2;
+                left: 0;
+                bottom: -5px;
+                background: #333;
+            }
+            span {
+                margin-bottom: 5px;
+                text-align: right;
+                display: block;
+                font-size: 30px;
+            }
+        }
+    }
+    padding: 100px 0 150px;
+    &-img {
+        max-width: 970px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+#myCarousel {
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel-inner .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+}
+
+.carousel-control-prev {
+    left: -40px;
+}
+
+.carousel-control-next {
+    right: -40px;
+}
+
+/* кінець слайдера */
+
+/* ----- Footer  ----- */
+
+.footer {
+    padding: 30px 0;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1b1b1b;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+.footer .footer__social a {
+    margin-right: 25px;
+    transition: transform 0.3s ease;
+}
+
+.footer .footer__social a:hover {
+    transform: scale(1.2);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.footer .footer__copyright {
+    color: #b2b2b2;
+    text-align: right;
+    animation: blink 3s infinite;
+}
+
+.footer {
+    padding: 30px 0;
+}
+
+@media (max-width: 991px) {
+    .footer .footer__logo {
+        text-align: center;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer__social a {
+    margin-right: 25px;
+}
+
+.footer .footer__social a:last-child {
+    margin-right: 0;
+}
+
+.footer .footer__social a > i {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    color: #b2b2b2;
+}
+
+.footer .footer__copyright {
+    color: #b2b2b2;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .footer .footer__copyright {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer--dark {
+    background: #1b1b1b;
+}
+.footer .footer__social a {
+    margin-right: 25px;
+    transition: transform 0.3s ease;
+}
+
+.footer .footer__social a:hover {
+    transform: scale(1.2);
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.footer .footer__copyright {
+    color: #b2b2b2;
+    text-align: right;
+    animation: blink 3s infinite;
+}
