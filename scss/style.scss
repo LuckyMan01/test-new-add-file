@@ -4,11 +4,12 @@
     color: #666;
     font-family: poppins, sans-serif;
 }
+a {
+    color: #000;
+    text-decoration: none;
+}
 body {
     font-family: montserrat, sans-serif;
-    a {
-        color: #333;
-    }
 }
 * {
     animation-delay: 0.1s;
@@ -186,6 +187,38 @@ body {
             transform 2s ease;
     }
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.btn-black {
+    text-align: center;
+    background: #1b1b1b;
+    color: #fff;
+    padding: 17px 0px;
+    max-width: 166px;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all 0.4s;
+    position: relative;
+    &:hover {
+        transition: all 0.4s;
+        background: #fff;
+        color: #1b1b1b;
+        &::before {
+            transition: all 0.4s;
+            content: "";
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            border: 1px solid #1b1b1b;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+        }
+    }
+}
 .arrows-slider {
     &.carousel-control-next {
         color: #666;
@@ -199,7 +232,7 @@ body {
     margin-top: -15px;
     &-right {
         &:hover::before {
-            transition: transform 0.3s ease;
+            transition: all 0.4s;
             color: #1b1b1b;
         }
         &::before {
@@ -208,7 +241,7 @@ body {
     }
     &-left {
         &:hover::before {
-            transition: transform 0.3s ease;
+            transition: all 0.4s;
             color: #1b1b1b;
         }
         &::before {
@@ -217,52 +250,65 @@ body {
     }
 }
 .who-ami {
-    .who-ami-unfold{
+    &-item {
+        display: flex;
+    }
+    .btn-black {
+        margin-top: 75px;
+        display: block;
+    }
+    .who-ami-unfold {
         width: 200px;
+        &-text {
+            white-space: nowrap;
+            letter-spacing: 5px;
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1;
+            padding: 20px;
+            background: #f8f8f8;
+            writing-mode: vertical-lr;
+        }
     }
     display: flex;
     align-items: center;
-    &-inner{
-        max-width: 970px;
+    &-inner {
         margin-bottom: 61px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .text{
-           max-width: 437px;
+        .text {
+            max-width: 437px;
         }
     }
-    &-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        .title {
-            font-weight: 600;
-            display: inline-block;
-            max-width: 414px;
-            position: relative;
-            font-size: 60px;
-            &::before {
-                position: absolute;
-                content: "";
-                display: block;
-                height: 4px;
-                width: 100%;
-                z-index: 2;
-                left: 0;
-                bottom: -5px;
-                background: #333;
-            }
-            span {
-                margin-bottom: 5px;
-                text-align: right;
-                display: block;
-                font-size: 30px;
-            }
+
+    .title {
+        font-weight: 600;
+        display: inline-block;
+        max-width: 414px;
+        position: relative;
+        font-size: 60px;
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 4px;
+            width: 100%;
+            z-index: 2;
+            left: 0;
+            bottom: -5px;
+            background: #333;
+        }
+        span {
+            margin-bottom: 5px;
+            text-align: right;
+            display: block;
+            font-size: 30px;
         }
     }
     padding: 100px 0 150px;
     &-img {
-        max-width: 970px;
         img {
             width: 100%;
             height: auto;

@@ -6,11 +6,13 @@
   font-family: poppins, sans-serif;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   font-family: montserrat, sans-serif;
-}
-body a {
-  color: #333;
 }
 
 * {
@@ -179,6 +181,40 @@ body a {
   transition: opacity 1s ease, transform 2s ease;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-black {
+  text-align: center;
+  background: #1b1b1b;
+  color: #fff;
+  padding: 17px 0px;
+  max-width: 166px;
+  font-family: poppins, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.4s;
+  position: relative;
+}
+.btn-black:hover {
+  transition: all 0.4s;
+  background: #fff;
+  color: #1b1b1b;
+}
+.btn-black:hover::before {
+  transition: all 0.4s;
+  content: "";
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  border: 1px solid #1b1b1b;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .arrows-slider {
   font-size: 50px;
   color: #666;
@@ -192,14 +228,14 @@ body a {
   color: #666;
 }
 .arrows-slider-right:hover::before {
-  transition: transform 0.3s ease;
+  transition: all 0.4s;
   color: #1b1b1b;
 }
 .arrows-slider-right::before {
   content: "→";
 }
 .arrows-slider-left:hover::before {
-  transition: transform 0.3s ease;
+  transition: all 0.4s;
   color: #1b1b1b;
 }
 .arrows-slider-left::before {
@@ -211,11 +247,28 @@ body a {
   align-items: center;
   padding: 100px 0 150px;
 }
+.who-ami-item {
+  display: flex;
+}
+.who-ami .btn-black {
+  margin-top: 75px;
+  display: block;
+}
 .who-ami .who-ami-unfold {
   width: 200px;
 }
+.who-ami .who-ami-unfold-text {
+  white-space: nowrap;
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 20px;
+  background: #f8f8f8;
+  writing-mode: vertical-lr;
+}
 .who-ami-inner {
-  max-width: 970px;
   margin-bottom: 61px;
   display: flex;
   justify-content: space-between;
@@ -224,18 +277,14 @@ body a {
 .who-ami-inner .text {
   max-width: 437px;
 }
-.who-ami-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.who-ami-wrapper .title {
+.who-ami .title {
   font-weight: 600;
   display: inline-block;
   max-width: 414px;
   position: relative;
   font-size: 60px;
 }
-.who-ami-wrapper .title::before {
+.who-ami .title::before {
   position: absolute;
   content: "";
   display: block;
@@ -246,14 +295,11 @@ body a {
   bottom: -5px;
   background: #333;
 }
-.who-ami-wrapper .title span {
+.who-ami .title span {
   margin-bottom: 5px;
   text-align: right;
   display: block;
   font-size: 30px;
-}
-.who-ami-img {
-  max-width: 970px;
 }
 .who-ami-img img {
   width: 100%;
